@@ -1,3 +1,6 @@
+import messages as msg
+
+ 
 def new_game():
     guesses = []
     correct_guesses = 0
@@ -15,8 +18,7 @@ def new_game():
         check_answers(questions.get(key), guess)          
         question_num += 1
         
-    check_score(correct_guesses, guesses)
-    play_again()        
+    check_score(correct_guesses, guesses)      
         
 #-------------------------------------------------
 def check_answers(answers, guess):
@@ -49,8 +51,7 @@ def check_score(correct_guesses, guesses):
             print("You got", score, "%.")
 #-------------------------------------------------
 def play_again():
-    response = input("Do you want to play again? (YES or NO): ")
-    response = response.upper()
+    response = input("Do you want to play again? (YES or NO): ").upper()
     
     if response == "YES":
         return True
@@ -75,4 +76,4 @@ new_game()
 
 while play_again():
     True
-    new_game()
+    new_game() 
