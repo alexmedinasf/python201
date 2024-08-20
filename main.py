@@ -1,5 +1,6 @@
 import messages as msg
 
+msg.Hello()
  
 def new_game():
     guesses = []
@@ -77,3 +78,5 @@ new_game()
 while play_again():
     True
     new_game() 
+        
+msg.Bye()            
